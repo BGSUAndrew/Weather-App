@@ -1,0 +1,13 @@
+html {
+    font-family: fantasy;
+}
+
+#weather-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 10%);
+    gap: 3rem;
+}
+
+#temp {
+    font-weight: 600;
+}
