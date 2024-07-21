@@ -11,3 +11,12 @@ html {
 #temp {
     font-weight: 600;
 }
+
+@media screen and (max-width: 600px) {
+    #weather-container {
+        grid-template-columns: 1fr;
+    }
+    .weather-period {
+        justify-self: center;
+    }
+}
