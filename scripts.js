@@ -9,6 +9,8 @@ fetch("https://api.weather.gov/gridpoints/SEW/128,66/forecast", requestOptions)
     .then(response => response.json())
     .then(result => {
     weatherResults = result.properties.periods;
+    temperature = result.properties.periods[0].temperature;
+    console.log(temperature);
     displayWeather(weatherResults);
 })
 .catch(error => console.log(error));
@@ -16,6 +18,8 @@ fetch("https://api.weather.gov/gridpoints/SEW/128,66/forecast", requestOptions)
 
 function displayWeather(weatherResults) {
     const getContainer = document.getElementById('weather-container');
+    const getBody = document.getElementById('weather-style');
+
     weatherResults.forEach(period => {
         const weatherDiv = document.createElement('div');
         weatherDiv.className = 'weather-period';
@@ -26,7 +30,19 @@ function displayWeather(weatherResults) {
         <img class="image" src="${period.icon}" alt="${period.shortForecast}">
         `;
         getContainer.appendChild(weatherDiv);
+        
+        if (temperature < 50) {
+            getBody.classList.add('cold');
+        } else if (temperature >=50 && temperature < 65) {
+            getBody.classList.add('cool');
+        } else if (temperature >= 66 && temperature < 80) {
+            getBody.classList.add('warm');
+        } else {
+            getBody.classList.add('hot');
+        }
+        
     });
+    
 }
 
 /*
@@ -34,3 +50,4 @@ function displayWeather(weatherResults) {
     1. Figure out a call to capture the grid points 
     2. Enter the grid points in the fetch call
 */
+

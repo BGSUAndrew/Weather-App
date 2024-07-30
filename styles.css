@@ -7,6 +7,19 @@ html {
     grid-template-columns: 10% 1fr 10%;
 }
 
+.cold {
+    background-color: #aee6f8;
+}
+.cool {
+    background-color: #00ffff;
+}
+.warm {
+    background-color: #f08080;
+}
+.hot {
+    background-color: #ffa500;
+}
+
 #weather-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 10%);
@@ -25,6 +38,9 @@ html {
     }
     .weather-period {
         justify-self: center;
+        text-align: center;
+    }
+    h1 {
         text-align: center;
     }
 }
