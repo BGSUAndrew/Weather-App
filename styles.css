@@ -39,6 +39,7 @@ html {
     .weather-period {
         justify-self: center;
         text-align: center;
+        font-size: 2rem;
     }
     h1 {
         text-align: center;
