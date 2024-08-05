@@ -28,7 +28,17 @@ html {
             align-content: center; 
 }
 
-#temp {
+.weather-period {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-period img {
+    margin-top: auto;
+    max-width: 96px;
+}
+
+#bold {
     font-weight: 600;
 }
 
@@ -41,6 +51,9 @@ html {
         justify-self: center;
         text-align: center;
         font-size: 2rem;
+    }
+    .weather-period img {
+        align-self: center;
     }
     h1 {
         text-align: center;

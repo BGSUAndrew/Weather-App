@@ -25,8 +25,8 @@ function displayWeather(weatherResults) {
         weatherDiv.className = 'weather-period';
         weatherDiv.innerHTML = `
         <h3 class="day">${period.name}</h3>
-        <p class="temp">Temperature: <span id="temp">${period.temperature}</span></p>
-        <p class="forecast">Forecast: ${period.shortForecast}</p>
+        <p class="bold">Temperature: <span id="bold">${period.temperature}</span></p>
+        <p class="forecast">Forecast: <span id="bold">${period.shortForecast}</span></p>
         <img class="image" src="${period.icon}" alt="${period.shortForecast}">
         `;
         getContainer.appendChild(weatherDiv);
