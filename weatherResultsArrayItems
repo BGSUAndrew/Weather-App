@@ -1,0 +1,9 @@
+weatherResults
+detailedForcast: String that describes the weather for the day 
+icon: String for a URL icon 
+name: String of what day we are looking at
+temperature: Int, is what it sounds like 
+
+Hourly (Don't currently have this one in the app so reviewed in Postman)
+Periods: Array that returns objects for each hour. 
+Inside the object there is a number a start time, a temperature, a probability of precipitation, and a short forecast. 
